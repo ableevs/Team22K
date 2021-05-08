@@ -1,0 +1,83 @@
+10
+
+dir
+111
+http://xn--e1afhkfagivn.xn--p1ai/svn/project22/trunk/MavenRGR/target
+http://xn--e1afhkfagivn.xn--p1ai/svn/project22
+
+
+
+2021-05-08T06:57:45.890114Z
+111
+user222
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2818cc46-0aa1-46ea-bd9c-a463c842ccb6
+
+MavenRGR-1.0.jar
+file
+
+
+
+
+2021-04-30T19:02:59.010000Z
+c491f42c97f3f6fe0e0c1e0f6ff50320
+2021-05-08T06:57:45.890114Z
+111
+user222
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19375
+
+classes
+dir
+
+generated-sources
+dir
+
+generated-test-sources
+dir
+
+maven-archiver
+dir
+
+maven-status
+dir
+
+surefire-reports
+dir
+
+test-classes
+dir
+
