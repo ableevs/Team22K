@@ -3,6 +3,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -16,8 +23,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class Auth {
-	public Auth() {
+	public Auth() throws IOException {
 		
+		InputStream pass = getClass().getResourceAsStream("/password");
+		Properties prop = new Properties();
+		prop.load(pass);
 		JFrame main_auth= new JFrame("Authorisation ");
 		main_auth.setTitle("Authorisation");
 		main_auth.setBounds(400,200,400, 230);
@@ -42,25 +52,49 @@ public class Auth {
 	        field6.setBounds(230, 90, 150, 30);
 	       	        auth_panel.add(field6);
 	       	        	       	        
-	        JButton button_auth = new JButton("Войти"); // добавляем кнопку
-	        button_auth.setBounds(145, 140, 100, 40);
+	        JButton button_auth = new JButton("Вход"); // добавляем кнопку
+	        button_auth.setBounds(210, 140, 120, 40);
 			auth_panel.add(button_auth);
 			main_auth.setVisible(true);
 			
+			JButton button_regist = new JButton("Регистрация"); // добавляем кнопку
+	        button_regist.setBounds(70, 140, 120, 40);
+			auth_panel.add(button_regist);
+			main_auth.setVisible(true);
+			
+			ActionListener registActionListener = new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					prop.setProperty(field5.getText().trim(),field6.getText().trim());
+					try {
+						FileOutputStream output = new FileOutputStream(getClass().getResource("/password").getPath());
+						prop.store(output, null);
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
+			
+			
+			};		
 			ActionListener authActionListener = new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if (field5.getText().trim().equals(Clients.admin)  && field6.getText().trim().equals(Clients.adminPassword)) {
-						Rgr rgr = new Rgr();
+						Rgr rgr = new Rgr(false);
 						main_auth.setVisible(false);
 					}
 					else if (field5.getText().trim().equals(Clients.dev1)  && field6.getText().trim().equals(Clients.dev1Password)) {
-						Rgr rgr = new Rgr();
+						Rgr rgr = new Rgr(false);
 						main_auth.setVisible(false);
 					}
 					else if (field5.getText().trim().equals(Clients.dev2) && field6.getText().trim().equals(Clients.dev2Password)) {
-						Rgr rgr = new Rgr();
+						Rgr rgr = new Rgr(false);
 						main_auth.setVisible(false);
 					}
 					else {
@@ -72,5 +106,7 @@ public class Auth {
 
 };
  button_auth.addActionListener(authActionListener);
+ button_regist.addActionListener(registActionListener);
 }
 }
+

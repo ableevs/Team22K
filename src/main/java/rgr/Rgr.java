@@ -1,8 +1,11 @@
 package rgr;
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -16,7 +19,12 @@ import javax.swing.JTextField;
 
 public class Rgr {
 	
-	public Rgr() {
+	public Rgr(Boolean isAdmin) {
+		
+
+		if (isAdmin==true) {
+			JOptionPane.showMessageDialog(null, "Вы зашли через Админа, действует скидка!");
+		}
 			
 		JFrame main_GUI= new JFrame("Cost install work ");
 		main_GUI.setTitle("Cost install work");
@@ -27,7 +35,26 @@ public class Rgr {
 		main_panel.setLayout(null);
 		main_GUI.add(main_panel);
 		
+		JCheckBox sale=new JCheckBox();
+		sale.setBounds(230,390,150,30);
+		main_panel.add(sale);
+		sale.setVisible(false);
+		
+		if (isAdmin==true) {
+			JLabel label11 = new JLabel("Панель администратора"); // Отображение текста или изображения
+			label11.setBounds(120,1,200,30);
+			main_panel.add(label11);
 			
+			main_panel.setBackground(Color.blue);
+			
+			JLabel labelSale = new JLabel("Скидка"); // Отображение текста или изображения
+			labelSale.setBounds(20,390,150,30);
+			main_panel.add(labelSale);
+							
+			sale.setVisible(true);
+			
+		}
+		
 			JLabel label1 = new JLabel("Вид напольного покрытия:"); // Отображение текста или изображения
 			label1.setBounds(20,30,200,30);
 			main_panel.add(label1);
@@ -150,10 +177,14 @@ public class Rgr {
 						Double price_floor=tmp*square;
 						Double plintus_price= (count_angles+perimetr)*100;
 						Double total_price =(price_floor+plintus_price);
+						if (isAdmin==true) {
+							if(sale.isSelected()) {
+								total_price=total_price*0.9;
+						}
 						if(perimetr==0 || square==0)
 	                        total_price=0.0;
 						field6.setText(total_price.toString());
-					} catch(Exception e) {
+					}} catch(Exception e) {
 						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
 						
 					}
@@ -282,7 +313,13 @@ public class Rgr {
 		
 	}
 	public static void main (String [] args) {
-		Auth auth = new Auth();
+		try {
+			Auth auth = new Auth();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Логин или пароль неверный!");
+		}
 		//Rgr start =new Rgr();
 		
 		

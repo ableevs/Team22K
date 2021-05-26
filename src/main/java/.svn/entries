@@ -26,6 +26,13 @@ svn:special svn:externals svn:needs-lock
 
 2818cc46-0aa1-46ea-bd9c-a463c842ccb6
 
+resource
+dir
+
+
+
+add
+
 rgr
 dir
 
