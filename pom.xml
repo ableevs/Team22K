@@ -8,14 +8,6 @@
   <name>MavenRGR</name>
   <url>http://maven.apache.org</url>
  <build>
- <resources>
-            <resource>
-                <directory>${project.basedir}/src/main/java/resource</directory>
-                <includes>
-                <include>password </include>
-                </includes>
-            </resource>
-          </resources>
 <pluginManagement>
             <plugins>
             <plugin>

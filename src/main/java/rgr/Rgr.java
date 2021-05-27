@@ -304,8 +304,7 @@ public class Rgr {
 		       cb2.addActionListener(baseBoxListener);	
 	        
 	     
-	       
-	        
+	    
 	        menu_bar.add(menu);
 	        main_GUI.setJMenuBar(menu_bar);
 			main_GUI.setVisible(true); 
