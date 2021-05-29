@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.swing.JButton;
@@ -17,8 +19,24 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
+import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+
 public class Rgr {
-	
+	Double total_price = (double) -1000;
 	public Rgr(Boolean isAdmin) {
 		
 
@@ -92,7 +110,7 @@ public class Rgr {
 			main_panel.add(label9);
 			
 			JCheckBox boxfl=new JCheckBox();
-			boxfl.setBounds(230,230,150,30);
+			boxfl.setBounds(230,230,20,30);
 			main_panel.add(boxfl);
 			
 			   JTextField squareTextField =new JTextField();
@@ -154,10 +172,10 @@ public class Rgr {
 		        	}
 				});
 		        main_panel.add(field6); // поле вывода   
-		
+		        
 		        
 	        JButton button_rachet = new JButton("Расчитать"); // добавляем кнопку
-	        button_rachet.setBounds(280, 420, 100, 40);
+	        button_rachet.setBounds(280, 425, 100, 35);
 	        main_panel.add(button_rachet);
 	        ActionListener rachetListener = new ActionListener() {
 /* baseprise - цена покрытия cover price - цена подложки parse - превращаем строку в число gettext - получаем текст */
@@ -176,15 +194,15 @@ public class Rgr {
 						}
 						Double price_floor=tmp*square;
 						Double plintus_price= (count_angles+perimetr)*100;
-						Double total_price =(price_floor+plintus_price);
+						total_price =(price_floor+plintus_price);
 						if (isAdmin==true) {
 							if(sale.isSelected()) {
 								total_price=total_price*0.9;
-						}
+						}}
 						if(perimetr==0 || square==0)
 	                        total_price=0.0;
 						field6.setText(total_price.toString());
-					}} catch(Exception e) {
+					} catch(Exception e) {
 						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
 						
 					}
@@ -194,11 +212,12 @@ public class Rgr {
 	        	
 	        	
 	        };
+	        
 	        button_rachet.addActionListener(rachetListener);
 	        
 	        
 	        JButton button_exit = new JButton("Выход"); // добавляем кнопку
-	        button_exit.setBounds(5, 420, 100, 40);
+	        button_exit.setBounds(5, 425, 100, 35);
 			main_panel.add(button_exit);
 			ActionListener exitActionListener=new ListenerButton();
 			button_exit.addActionListener(exitActionListener);
@@ -207,6 +226,50 @@ public class Rgr {
 	        JButton menu= new JButton("Справка");
 	        ActionListener infoActionListener=new Info();
 	        menu.addActionListener(infoActionListener);
+	        
+	        JButton button_pdf = new JButton("PDF"); 
+	        button_pdf.setBounds(145, 425, 100, 35);
+	        main_panel.add(button_pdf);
+	        JOptionPane.showMessageDialog(null, "Test1");
+	        ActionListener pdfListener = new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if (total_price<0) {
+						JOptionPane.showMessageDialog(null, "Ошибка!");
+					}
+					else {
+					Document document = new Document();
+					try {
+						PdfWriter.getInstance(document, new FileOutputStream("summa.pdf"));
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
+					} catch (DocumentException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
+					}
+
+					document.open();
+					Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+					Chunk chunk = new Chunk("Summa: ", font);
+					Chunk chunk1 = new Chunk(total_price.toString(), font);
+					try {
+						document.add(chunk);
+						document.add(chunk1);
+					} catch (DocumentException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
+					}
+					document.close();
+				}
+				}
+	        };
+	       
+	        button_pdf.addActionListener(pdfListener);
 	        
 	        
 	        

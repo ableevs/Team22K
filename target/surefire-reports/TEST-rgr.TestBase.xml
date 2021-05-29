@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\ableev\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf10186843851591600738.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\ableev\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6742834991930351642.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="java.library.path" value="C:\Users\ableev\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/ableev/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin/server;C:/Users/ableev/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\TortoiseSVN\bin;%M2%;;C:\Program Files\EmEditor;C:\Users\ableev\AppData\Local\Microsoft\Windows;C:\apache-maven-3.6.3\bin;;C:\Users\ableev\Desktop;;."/>
     <property name="jdk.debug" value="release"/>
