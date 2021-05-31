@@ -241,7 +241,7 @@ public class Rgr {
 					else {
 					Document document = new Document();
 					try {
-						PdfWriter.getInstance(document, new FileOutputStream("summa.pdf"));
+						PdfWriter.getInstance(document, new FileOutputStream("rachet_stoim.pdf"));
 					} catch (FileNotFoundException e1) {
 						
 						e1.printStackTrace();
