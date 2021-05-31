@@ -230,7 +230,7 @@ public class Rgr {
 	        JButton button_pdf = new JButton("PDF"); 
 	        button_pdf.setBounds(145, 425, 100, 35);
 	        main_panel.add(button_pdf);
-	        JOptionPane.showMessageDialog(null, "Test1");
+	        
 	        ActionListener pdfListener = new ActionListener() {
 
 				@Override
