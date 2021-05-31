@@ -243,22 +243,23 @@ public class Rgr {
 					try {
 						PdfWriter.getInstance(document, new FileOutputStream("summa.pdf"));
 					} catch (FileNotFoundException e1) {
-						// TODO Auto-generated catch block
+						
 						e1.printStackTrace();
-						JOptionPane.showMessageDialog(null, "«аполнены не все пол€ или не в неправильном формате");
+						
 					} catch (DocumentException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-						JOptionPane.showMessageDialog(null, "«аполнены не все пол€ или не в неправильном формате");
+					
 					}
 
 					document.open();
 					Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
-					Chunk chunk = new Chunk("Summa: ", font);
-					Chunk chunk1 = new Chunk(total_price.toString(), font);
+					Chunk chunk2 = new Chunk("Summa: ", font);
+					Chunk chunk3 = new Chunk(total_price.toString(), font);
+					
 					try {
-						document.add(chunk);
-						document.add(chunk1);
+						document.add(chunk2);
+						document.add(chunk3);
 					} catch (DocumentException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
