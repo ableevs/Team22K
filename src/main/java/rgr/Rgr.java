@@ -254,7 +254,8 @@ public class Rgr {
 
 					document.open();
 					Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
-					Chunk chunk2 = new Chunk("Summa: ", font);
+					Chunk chunk1 = new Chunk("Итоговая сумма", font);
+					Chunk chunk2 = new Chunk("Сумма: ", font);
 					Chunk chunk3 = new Chunk(total_price.toString(), font);
 					
 					try {

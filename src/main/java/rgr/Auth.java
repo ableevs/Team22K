@@ -33,7 +33,9 @@ public class Auth {
 		JPanel auth_panel =new JPanel();
 		auth_panel.setLayout(null);
 		main_auth.add(auth_panel);
-		
+		JLabel toptext = new JLabel("Авторизация"); // Отображение текста или изображения
+		toptext.setBounds(155,5,310,30);
+		auth_panel.add(toptext);
 		JLabel login = new JLabel("Login"); // Отображение текста или изображения
 		login.setBounds(40,50,310,30);
 		auth_panel.add(login);
@@ -50,7 +52,7 @@ public class Auth {
 	       	        auth_panel.add(field6);
 	       	        	       	        
 	        JButton button_auth = new JButton("Вход"); // добавляем кнопку
-	        button_auth.setBounds(210, 140, 120, 40);
+	        button_auth.setBounds(135, 140, 120, 40);
 			auth_panel.add(button_auth);
 			main_auth.setVisible(true);
 				
