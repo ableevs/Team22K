@@ -41,7 +41,7 @@ public class Rgr {
 		
 
 		if (isAdmin==true) {
-			JOptionPane.showMessageDialog(null, "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
+			JOptionPane.showMessageDialog(null, "Вы зашли через админа действует скидка!");
 		}
 			
 		JFrame main_GUI= new JFrame("Cost install work ");
@@ -54,18 +54,18 @@ public class Rgr {
 		main_GUI.add(main_panel);
 		
 		JCheckBox sale=new JCheckBox();
-		sale.setBounds(230,390,150,30);
+		sale.setBounds(230,390,20,30);
 		main_panel.add(sale);
 		sale.setVisible(false);
 		
 		if (isAdmin==true) {
-			JLabel label11 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+			JLabel label11 = new JLabel("Вид напольного покрытия:"); // Отображение текста или изображения
 			label11.setBounds(120,1,200,30);
 			main_panel.add(label11);
 			
 			main_panel.setBackground(Color.blue);
 			
-			JLabel labelSale = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+			JLabel labelSale = new JLabel("Скидка"); // Отображение текста или изображения
 			labelSale.setBounds(20,390,150,30);
 			main_panel.add(labelSale);
 							
@@ -73,41 +73,41 @@ public class Rgr {
 			
 		}
 		
-			JLabel label1 = new JLabel("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label1.setBounds(20,30,200,30);
-			main_panel.add(label1);
-			
-			JLabel label2 = new JLabel("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label2.setBounds(20,70,150,30);
-			main_panel.add(label2);
-			
-			JLabel label3 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ^2"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label3.setBounds(20,110,170,30);
-			main_panel.add(label3);
-			
-			JLabel label4 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label4.setBounds(20,150,150,30);
-			main_panel.add(label4);
-			
-			JLabel label5 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label5.setBounds(20,190,200,30);
-			main_panel.add(label5);
-			
-			JLabel label6 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label6.setBounds(20,230,150,30);
-			main_panel.add(label6);
-			
-			JLabel label7 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label7.setBounds(20,270,200,30);
-			main_panel.add(label7);
-			
-			JLabel label8 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label8.setBounds(20,310,200,30);
-			main_panel.add(label8);
-			
-			JLabel label9 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-			label9.setBounds(20,350,200,30);
-			main_panel.add(label9);
+		JLabel label1 = new JLabel("Вид напольного покрытия:"); // Отображение текста или изображения
+		label1.setBounds(20,30,200,30);
+		main_panel.add(label1);
+		
+		JLabel label2 = new JLabel("Вид подложки"); // Отображение текста или изображения
+		label2.setBounds(20,70,150,30);
+		main_panel.add(label2);
+		
+		JLabel label3 = new JLabel("Площадь помещения, м^2"); // Отображение текста или изображения
+		label3.setBounds(20,110,170,30);
+		main_panel.add(label3);
+		
+		JLabel label4 = new JLabel("Периметр помещения, м"); // Отображение текста или изображения
+		label4.setBounds(20,150,150,30);
+		main_panel.add(label4);
+		
+		JLabel label5 = new JLabel("Количество углов в помещении"); // Отображение текста или изображения
+		label5.setBounds(20,190,200,30);
+		main_panel.add(label5);
+		
+		JLabel label6 = new JLabel("Теплый пол"); // Отображение текста или изображения
+		label6.setBounds(20,230,150,30);
+		main_panel.add(label6);
+		
+		JLabel label7 = new JLabel("Стоимость установки покрытия"); // Отображение текста или изображения
+		label7.setBounds(20,270,200,30);
+		main_panel.add(label7);
+		
+		JLabel label8 = new JLabel("Стоимость установки подложки"); // Отображение текста или изображения
+		label8.setBounds(20,310,200,30);
+		main_panel.add(label8);
+		
+		JLabel label9 = new JLabel("Суммарная стоимость"); // Отображение текста или изображения
+		label9.setBounds(20,350,200,30);
+		main_panel.add(label9);
 			
 			JCheckBox boxfl=new JCheckBox();
 			boxfl.setBounds(230,230,20,30);
@@ -171,14 +171,14 @@ public class Rgr {
 		        		e.consume();
 		        	}
 				});
-		        main_panel.add(field6); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ   
+		        main_panel.add(field6); // поле вывода   
 		        
 		        
-	        JButton button_rachet = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	        JButton button_rachet = new JButton("Рассчитать"); // добавляем кнопку
 	        button_rachet.setBounds(280, 425, 100, 35);
 	        main_panel.add(button_rachet);
 	        ActionListener rachetListener = new ActionListener() {
-/* baseprise - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ cover price - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ parse - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ gettext - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+/* baseprise - цена покрытия cover price - цена подложки parse - превращаем строку в число gettext - получаем текст */
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					try {
@@ -189,7 +189,7 @@ public class Rgr {
 						int count_angles=Integer.parseInt(amountAnglesTextField.getText());
 						Double tmp=basePrice+coverPrice;
 						if(boxfl.isSelected()) {
-							tmp+=490; //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+							tmp+=490; //если выбрана установка теплого пола
 							
 						}
 						Double price_floor=tmp*square;
@@ -203,7 +203,7 @@ public class Rgr {
 	                        total_price=0.0;
 						field6.setText(total_price.toString());
 					} catch(Exception e) {
-						JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+						JOptionPane.showMessageDialog(null, "Заполнены не все поля или не в неправильном формате");
 						
 					}
 					
@@ -216,14 +216,14 @@ public class Rgr {
 	        button_rachet.addActionListener(rachetListener);
 	        
 	        
-	        JButton button_exit = new JButton("пїЅпїЅпїЅпїЅпїЅ"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	        JButton button_exit = new JButton("Выход"); // добавляем кнопку
 	        button_exit.setBounds(5, 425, 100, 35);
 			main_panel.add(button_exit);
 			ActionListener exitActionListener=new ListenerButton();
 			button_exit.addActionListener(exitActionListener);
 			
 			JMenuBar menu_bar= new JMenuBar();
-	        JButton menu= new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+	        JButton menu= new JButton("Справка");
 	        ActionListener infoActionListener=new Info();
 	        menu.addActionListener(infoActionListener);
 	        
@@ -236,7 +236,7 @@ public class Rgr {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if (total_price<0) {
-						JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅ!");
+						JOptionPane.showMessageDialog(null, "Ошибка!");
 					}
 					else {
 					Document document = new Document();
@@ -264,7 +264,7 @@ public class Rgr {
 					} catch (DocumentException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-						JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+						
 					}
 					document.close();
 				}
@@ -280,9 +280,9 @@ public class Rgr {
 	        Cover parquetCover =new Cover();
 	        Cover linoleumCover= new Cover();
 	        
-	        laminateCover.setName("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
-	        parquetCover.setName("пїЅпїЅпїЅпїЅпїЅпїЅ");
-	        linoleumCover.setName("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+	        laminateCover.setName("Ламинат");
+	        parquetCover.setName("Паркет");
+	        linoleumCover.setName("Линолеум");
 	        
 	        laminateCover.setPrice("200");
 	        parquetCover.setPrice("490");
@@ -290,7 +290,7 @@ public class Rgr {
 	       
 	        
 	        
-	        String[] box1 = { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ combo box
+	        String[] box1 = { // добавление массива для combo box
 	        		"",
 					laminateCover.getName(),
 					parquetCover.getName(),
@@ -302,14 +302,14 @@ public class Rgr {
 	        main_panel.add(cb1);
 	        
 	        
-	        ActionListener coverBoxListener=new ActionListener() { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ combo box
+	        ActionListener coverBoxListener=new ActionListener() { 
 	        	public void actionPerformed(ActionEvent e) {
 	        	String choose= (String)cb1.getSelectedItem();
 	        	switch (choose) {
 	        	case "": field4.setText(""); break;
-	        	case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ": field4.setText(laminateCover.getPrice()); break;
-	        	case "пїЅпїЅпїЅпїЅпїЅпїЅ" : field4.setText(parquetCover.getPrice());  break;
-	        	case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ": field4.setText(linoleumCover.getPrice()); break;
+	        	case "Ламинат": field4.setText(laminateCover.getPrice()); break;
+	        	case "Паркет" : field4.setText(parquetCover.getPrice());  break;
+	        	case "Линолеум": field4.setText(linoleumCover.getPrice()); break;
 	        	}
 	        	
 	        	}
@@ -321,10 +321,10 @@ public class Rgr {
 	        Base plywood =new Base();
 	        Base fiberboard=new Base();
 	        
-	        corkBase.setName("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
-	        polyurethaneBase.setName("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
-	        plywood.setName("пїЅпїЅпїЅпїЅпїЅпїЅ");
-	        fiberboard.setName("пїЅпїЅпїЅ");
+	        corkBase.setName("Пробковые листы");
+	        polyurethaneBase.setName("Полиуретановый лист");
+	        plywood.setName("Фанера");
+	        fiberboard.setName("ДВП");
 	        
 	        corkBase.setPrice("210");
 	        polyurethaneBase.setPrice("140");
@@ -333,7 +333,7 @@ public class Rgr {
 	        
 	        
 	        
-	        String[] box2 = { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
+	        String[] box2 = { // Добавление массива
 					
 					"",
 			        corkBase.getName(),  
@@ -343,7 +343,7 @@ public class Rgr {
 			    };
 	        
 	      
-	        JComboBox cb2 = new JComboBox(box2);// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	        JComboBox cb2 = new JComboBox(box2);//  комбобокс для подложки
 	        cb2.setBounds(230,70,150,30);
 			main_panel.add(cb2);
 			  ActionListener baseBoxListener=new ActionListener() {
@@ -353,10 +353,10 @@ public class Rgr {
 						String choose=(String)cb2.getSelectedItem();
 						switch (choose) {
 						case "": field5.setText("");break;
-						case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ": field5.setText(corkBase.getPrice());break;
-						case "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ" : field5.setText(polyurethaneBase.getPrice());break;
-						case "пїЅпїЅпїЅпїЅпїЅпїЅ" : field5.setText(plywood.getPrice());break;
-						case "пїЅпїЅпїЅ" : field5.setText(fiberboard.getPrice());break;
+						case "Пробковые листы": field5.setText(corkBase.getPrice());break;
+						case "Полиуретановый лист" : field5.setText(polyurethaneBase.getPrice());break;
+						case "Фанера" : field5.setText(plywood.getPrice());break;
+						case "ДВП" : field5.setText(fiberboard.getPrice());break;
 							
 						
 						}
@@ -382,7 +382,7 @@ public class Rgr {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
+			
 		}
 		//Rgr start =new Rgr();
 		
