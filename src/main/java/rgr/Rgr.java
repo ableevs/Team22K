@@ -227,7 +227,7 @@ public class Rgr {
 	        ActionListener infoActionListener=new Info();
 	        menu.addActionListener(infoActionListener);
 	        
-	        JButton button_pdf = new JButton("PDF"); 
+	        JButton button_pdf = new JButton("â PDF"); 
 	        button_pdf.setBounds(145, 425, 100, 35);
 	        main_panel.add(button_pdf);
 	        
@@ -241,7 +241,7 @@ public class Rgr {
 					else {
 					Document document = new Document();
 					try {
-						PdfWriter.getInstance(document, new FileOutputStream("rachet_stoim.pdf"));
+						PdfWriter.getInstance(document, new FileOutputStream("rachet.pdf"));
 					} catch (FileNotFoundException e1) {
 						
 						e1.printStackTrace();
